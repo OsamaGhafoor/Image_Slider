@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="110dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img1"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="110dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img2"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="110dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img3"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="110dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img4"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="110dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img5"/>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/scroll"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp">
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:iss_auto_cycle="true"
+            app:iss_period="1000"
+            app:iss_delay="0"/>
+
+        <View
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
